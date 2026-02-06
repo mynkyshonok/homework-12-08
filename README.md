@@ -18,7 +18,9 @@
 #### Ответ:
 
 1.1 Полный бэкап ежедневно
+
 1.2 Инкрементный бэкап ежечасно
+
 1.3 Зависит от типа поломки: если поломка физическая, то по принципу репликации будет переключение на реплики, если поломка самой базы, то ситуация сложнее - требуется восстановление с резервной копии, что займет какое то время
 
 ---
@@ -50,7 +52,7 @@
 
 #### Ответ:
 
-mysqldump -u [user] -p[password] --single-transaction --flush-logs --master-data=2 --all-databases > incremental_backup.sql
+3.1. mysqldump -u [user] -p[password] --single-transaction --flush-logs --master-data=2 --all-databases > incremental_backup.sql
 
 
 ---
